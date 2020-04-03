@@ -12,7 +12,12 @@ pipeline {
         sh 'echo "Done!"'
         sh 'hostname'
         sh 'echo "Master!"'
-        sh 'exit 3'
+        sh '''echo "PR CHECK"
+        N=$(cat simple-file |wc -l)
+        if (( $N % 2 )); then
+           exit 3
+        fi
+'''
       }
     }
 
