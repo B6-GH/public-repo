@@ -11,7 +11,7 @@ pipeline {
 '''
         sh 'echo "Done!"'
         sh 'hostname'
-        sh 'echo "Master!"'
+        sh 'echo "Master-PR!"'
         sh '''echo "PR CHECK"
         N=$(cat simple-file |wc -l)
         if (( $N % 2 )); then
