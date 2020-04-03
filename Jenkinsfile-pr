@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  stages {
+    stage('Stage-1') {
+      steps {
+        sh '''echo "PR stage-1 / step-1"
+        echo "2"
+        echo "3"
+'''
+        sh '''sleep 1
+'''
+        sh 'echo "Done!"'
+        sh 'hostname'
+        sh 'echo "Master!"'
+      }
+    }
+
+  }
+}
