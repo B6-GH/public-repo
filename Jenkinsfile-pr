@@ -12,7 +12,7 @@ pipeline {
         sh 'echo "Done!"'
         sh 'hostname'
         sh 'echo "Master!"'
-        sh 'exit -3'
+        sh 'exit 3'
       }
     }
 
